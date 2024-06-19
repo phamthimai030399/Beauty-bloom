@@ -1,0 +1,26 @@
+.notfound {
+  margin: 115px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .notfound-img {
+    aspect-ratio: 910 / 461;
+    width: 78.362%;
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-size: 2.25rem;
+    text-align: center;
+    color: $green;
+    margin-bottom: 30px;
+  }
+}
+
+@include tablet {
+  .notfound {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}

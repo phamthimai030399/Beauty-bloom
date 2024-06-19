@@ -1,0 +1,320 @@
+@font-face {
+  font-family: "mont-extralight";
+  src: url("../fonts/Mont/Mont-ExtraLight.otf") format("truetype");
+}
+@font-face {
+  font-family: "mont-bold";
+  src: url("../fonts/Mont/Mont-Bold.otf") format("truetype");
+}
+@font-face {
+  font-family: "manrope-extralight";
+  src: url("../fonts/Manrope/Manrope-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "manrope-light";
+  src: url("../fonts/Manrope/Manrope-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "manrope-regular";
+  src: url("../fonts/Manrope/Manrope-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "manrope-medium";
+  src: url("../fonts/Manrope/Manrope-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "manrope-semibold";
+  src: url("../fonts/Manrope/Manrope-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "manrope-bold";
+  src: url("../fonts/Manrope/Manrope-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "manrope-extrabold";
+  src: url("../fonts/Manrope/Manrope-ExtraBold.ttf") format("truetype");
+}
+
+:root {
+  --font-mont-extralight: mont-extralight, sans-serif;
+  --font-mont-bold: mont-bold, sans-serif;
+  --font-manrope-extralight: manrope-extralight, sans-serif;
+  --font-manrope-light: manrope-light, sans-serif;
+  --font-manrope: manrope-regular, sans-serif;
+  --font-manrope-medium: manrope-medium, sans-serif;
+  --font-manrope-semibold: manrope-semibold, sans-serif;
+  --font-manrope-bold: manrope-bold, sans-serif;
+  --font-manrope-extrabold: manrope-extrabold, sans-serif;
+  --clr-pimary-green: #367c2e;
+  --clr-light-green: #58af4e;
+  --clr-middle-green: #4c9744;
+  --clr-green-black: #214336;
+  --clr-second-bg: #eeebdb;
+  --clr-add-grey: #d9d9d9;
+  --clr-dark-grey: #575757;
+  --clr-light: #f0f7ee;
+  --clr-off-white: #e4e0ce;
+  --clr-border: #d9d9d9;
+  --clr-very-dark: #24282a;
+  --clr-grey: #616161;
+  --clr-dim-grey: #727272;
+}
+
+$font-heading: var(--font-mont-extralight);
+$font-heading-bold: var(--font-mont-bold);
+$font-extralight: var(--font-manrope-extralight);
+$font-light: var(--font-manrope-light);
+$font-regular: var(--font-manrope);
+$font-medium: var(--font-manrope-medium);
+$font-semibold: var(--font-manrope-semibold);
+$font-bold: var(--font-manrope-bold);
+$font-extrabold: var(--font-manrope-extrabold);
+
+$bg-main: var(--clr-second-bg);
+$bg-dark-green: var(--clr-green-black);
+$bg-green: var(--clr-pimary-green);
+$bg-off-white: var(--clr-off-white);
+$green: var(--clr-pimary-green);
+$light-green: var(--clr-light-green);
+$middle-green: var(--clr-middle-green);
+$green-black: var(--clr-green-black);
+$very-dark: var(--clr-very-dark);
+$clr-text-black: black;
+$clr-text-white: white;
+$clr-text-grey: var(--clr-dark-grey);
+$clr-light-grey: var(--clr-add-grey);
+$clr-text-green: var(--clr-pimary-green);
+$clr-text-dark: var(--clr-green-black);
+$clr-border: var(--clr-border);
+$clr-text-date: var(--clr-grey);
+$clr-breadcrumb: var(--clr-dim-grey);
+
+// KEYFRAMES
+@keyframes updown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes updown2 {
+  from {
+    transform: translateY(7%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes updown3 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bubbleLeft {
+  0% {
+    transform: scale(0.5) translateX(-100%);
+    opacity: 0;
+  }
+
+  65% {
+    transform: scale(1) translateX(-100%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes bubbleRight {
+  0% {
+    transform: scale(0.5) translateX(100%);
+    opacity: 0;
+  }
+
+  65% {
+    transform: scale(1) translateX(100%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes arowLeftTop {
+  0% {
+    transform: translate(-100%, 0) rotate(-5deg);
+    opacity: 0;
+  }
+
+  65% {
+    transform: translate(calc(-100% - 30px), -30px) rotate(5deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(calc(-100% - 30px), -30px) rotate(5deg);
+    opacity: 0;
+  }
+}
+
+@keyframes arowLeftBottom {
+  0% {
+    transform: translate(-100%, -30px) rotate(5deg);
+    opacity: 0;
+  }
+
+  65% {
+    transform: translate(calc(-100% - 30px), 0px) rotate(-5deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(calc(-100% - 30px), 0px) rotate(-5deg);
+    opacity: 0;
+  }
+}
+
+@keyframes arowRightTop {
+  0% {
+    transform: translate(100%, 30px) rotate(5deg);
+    opacity: 0;
+  }
+
+  65% {
+    transform: translate(calc(100% + 30px), 0px) rotate(-5deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(calc(100% + 30px), 0px) rotate(-5deg);
+    opacity: 0;
+  }
+}
+
+@keyframes arowRightBottom {
+  0% {
+    transform: translate(100%, 30px) rotate(-5deg);
+    opacity: 0;
+  }
+
+  65% {
+    transform: translate(calc(100% + 30px), 0px) rotate(5deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(calc(100% + 30px), 0px) rotate(5deg);
+    opacity: 0;
+  }
+}
+@keyframes leafOne {
+  0% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  16.67% {
+    transform: translateX(0) translateY(2px) rotate(-1deg);
+  }
+  33.33% {
+    transform: translateX(5px) translateY(4px) rotate(3deg);
+  }
+  50% {
+    transform: translateX(2px) translateY(0px) rotate(5deg);
+  }
+  66.67% {
+    transform: translateX(5px) translateY(4px) rotate(3deg);
+  }
+  83.33% {
+    transform: translateX(0) translateY(2px) rotate(-1deg);
+  }
+  100% {
+    transform: translateX(-5px) translateY(0) rotate(-5deg);
+  }
+}
+@keyframes leaf2nd {
+  0% {
+    transform: translateX(5px) rotate(5deg);
+  }
+  16.67% {
+    transform: translateX(0) translateY(-2px) rotate(1deg);
+  }
+  33.33% {
+    transform: translateX(-5px) translateY(-4px) rotate(-3deg);
+  }
+  50% {
+    transform: translateX(-2px) translateY(0px) rotate(-5deg);
+  }
+  66.67% {
+    transform: translateX(-5px) translateY(-4px) rotate(-3deg);
+  }
+  83.33% {
+    transform: translateX(0) translateY(-2px) rotate(1deg);
+  }
+  100% {
+    transform: translateX(5px) translateY(0) rotate(5deg);
+  }
+}
+
+// START BREAKPOINT VARIABLES
+@mixin extra-desktop {
+  @media only screen and (max-width: 1440.98px) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media only screen and (max-width: 1399.98px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin landscape-phone {
+  @media only screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin portrait-phone {
+  @media only screen and (max-width: 575.98px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 480.98px) {
+    @content;
+  }
+}
+// END BREAKPOINT VARIABLES
